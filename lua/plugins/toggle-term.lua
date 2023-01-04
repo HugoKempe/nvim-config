@@ -43,6 +43,15 @@ vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", {nor
 
 local term = Terminal:new({
   direction = "float",
+  float_opts = {
+    border = "double",
+  },
+
+  on_open = function(term)
+    vim.cmd("startinsert!")
+    vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", {noremap = true, silent = true})
+  end,
+
 })
 
 function _term_toggle()
@@ -50,3 +59,4 @@ function _term_toggle()
 end
 
 vim.api.nvim_set_keymap("n", "<leader>tt", "<cmd>lua _term_toggle()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("t", "<leader>tt", "<cmd>lua _term_toggle()<CR>", {noremap = true, silent = true})
