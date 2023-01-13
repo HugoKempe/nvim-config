@@ -49,18 +49,23 @@ return packer.startup(function(use)
   use { "kyazdani42/nvim-web-devicons" }
   use { "nvim-tree/nvim-tree.lua" }
   use {'akinsho/bufferline.nvim', tag = "v3.*"}
+  use { "numToStr/Comment.nvim" }
   
   -- Colorscemes
   use { "gruvbox-community/gruvbox" }
   use { "EdenEast/nightfox.nvim" }
 
   -- cmp plugins
-  use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
+  use { -- Autocompletion
+    'hrsh7th/nvim-cmp',
+    requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
+  }
+  --[[ use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
   use { "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" } -- buffer completions
   use { "hrsh7th/cmp-path", commit = "447c87cdd6e6d6a1d2488b1d43108bfa217f56e1" } -- path completions
   use { "saadparwaiz1/cmp_luasnip", commit = "a9de941bcbda508d0a45d28ae366bb3f08db2e36" } -- snippet completions
   use { "hrsh7th/cmp-nvim-lsp", commit = "affe808a5c56b71630f17aa7c38e15c59fd648a8" }
-  use { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" }
+  use { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" } ]]
 
   -- snippets
   use { "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" } --snippet engine
@@ -70,6 +75,8 @@ return packer.startup(function(use)
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
+    "j-hui/fidget.nvim",
+    "folke/neodev.nvim",
     "neovim/nvim-lspconfig",
   }
   use { "jose-elias-alvarez/null-ls.nvim" }
@@ -78,10 +85,11 @@ return packer.startup(function(use)
   use { "nvim-telescope/telescope.nvim" }
 
   -- Treesitter
-
+  use { 'nvim-treesitter/nvim-treesitter' }
   -- Git
 
   -- Dap
+  use { "mfussenegger/nvim-dap" }
 
   -- Formatter
 
