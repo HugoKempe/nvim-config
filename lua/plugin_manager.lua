@@ -50,6 +50,8 @@ return packer.startup(function(use)
   use { "nvim-tree/nvim-tree.lua" }
   use {'akinsho/bufferline.nvim', tag = "v3.*"}
   use { "numToStr/Comment.nvim" }
+  use {"akinsho/toggleterm.nvim", tag = '*' }
+  use { 'nvim-lualine/lualine.nvim' }
   
   -- Colorscemes
   use { "gruvbox-community/gruvbox" }
@@ -80,12 +82,14 @@ return packer.startup(function(use)
     "neovim/nvim-lspconfig",
   }
   use { "jose-elias-alvarez/null-ls.nvim" }
+  use { "p00f/clangd_extensions.nvim" }
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim" }
 
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter' }
+  use { "Badhi/nvim-treesitter-cpp-tools" }
   -- Git
 
   -- Dap

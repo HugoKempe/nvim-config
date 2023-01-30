@@ -14,3 +14,4 @@ require('plugins.lsp.mason')
 require('fidget').setup()
 require('plugins.lsp.cmp')
 -- nvim-cmp setup
+require('plugins.lsp.clangd-extentions')

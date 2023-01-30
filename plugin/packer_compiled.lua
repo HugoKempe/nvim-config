@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/hugo/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
+  ["clangd_extensions.nvim"] = {
+    loaded = true,
+    path = "/Users/hugo/.local/share/nvim/site/pack/packer/start/clangd_extensions.nvim",
+    url = "https://github.com/p00f/clangd_extensions.nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/hugo/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -113,6 +118,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hugo/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/gruvbox-community/gruvbox"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/hugo/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -164,6 +174,11 @@ _G.packer_plugins = {
     path = "/Users/hugo/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-treesitter-cpp-tools"] = {
+    loaded = true,
+    path = "/Users/hugo/.local/share/nvim/site/pack/packer/start/nvim-treesitter-cpp-tools",
+    url = "https://github.com/Badhi/nvim-treesitter-cpp-tools"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/hugo/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -183,6 +198,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hugo/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/Users/hugo/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
   }
 }
 
