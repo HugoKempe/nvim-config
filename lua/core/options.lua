@@ -1,40 +1,17 @@
--- Set highlight on search
-vim.o.hlsearch = false
+local global = vim.g
+local option = vim.o
+local opt = vim.opt
+local buffer_option = vim.bo
+local window_option = vim.wo
+local indent = 2
 
--- Make line numbers default
-vim.wo.number = true
+global.mapleader = " " -- Set leader
+global.maplocalleader = " " -- Set local leader
+
 vim.wo.relativenumber = true
 
--- Enable mouse mode
-vim.o.mouse = 'a'
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
--- Enable break indent
-vim.o.breakindent = true
-
--- Save undo history
-vim.o.undofile = true
-
--- Case insensitive searching UNLESS /C or capital in search
-vim.o.ignorecase = true
-vim.o.smartcase = true
-
--- Decrease update time
-vim.o.updatetime = 250
-vim.wo.signcolumn = 'yes'
-
--- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
-
-local o = vim.o
--- Text behaviour
--- o.formatoptions = o.formatoptions
---                    + 't'    -- auto-wrap text using textwidth
---                    + 'c'    -- auto-wrap comments using textwidth
---                    + 'r'    -- auto insert comment leader on pressing enter
---                    - 'o'    -- don't insert comment leader on pressing o
---                    + 'q'    -- format comments with gq
---                    - 'a'    -- don't autoformat the paragraphs (use some formatter instead)
---                    + 'n'    -- autoformat numbered list
---                    - '2'    -- I am a programmer and not a writer
---                    + 'j'    -- Join comments smartly
-o.formatoptions = o.formatoptions .. 'tcrqnj'
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
