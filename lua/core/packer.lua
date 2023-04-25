@@ -84,6 +84,34 @@ return require('packer').startup(function(use)
 	    require('Comment').setup()
     end
   }
+  -- dashboard
+  use {
+  'glepnir/dashboard-nvim',
+  event = 'VimEnter',
+  config = function()
+    require('dashboard').setup {
+      -- config
+      theme = 'doom',
+      config = {
+	      center = {
+		{
+			icon = '',
+      			icon_hl = 'group',
+      			desc = 'description',
+      			desc_hl = 'group',
+      			key = 'shortcut key in dashboard buffer not keymap !!',
+      			key_hl = 'group',
+      			action = '',
+	      	},
+      	},
+      },
+      hide = {},
+      preview = {},
+
+    }
+  end,
+  requires = {'nvim-tree/nvim-web-devicons'}
+}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
